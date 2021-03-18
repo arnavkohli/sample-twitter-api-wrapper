@@ -30,8 +30,3 @@ class API:
 		data = self.api.me()
 		tweets = self.api.user_timeline()
 		return {"tweets" : [{"tweet_id" : tweet.id, "user_id": data.id, "text" : tweet.text} for tweet in tweets]}
-
-	# def home_timeline(self):
-	# 	data = self.api.me()
-	# 	tweets = self.api.user_timeline()
-	# 	return {"timeline" : [{"tweet_id" : tweet.id, "user_id": data.id, "text" : tweet.text} for tweet in tweets]}

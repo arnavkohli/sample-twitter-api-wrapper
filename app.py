@@ -81,24 +81,6 @@ def user_tweets():
 
 	return {"success" : True}
 
-# @app.route("/userTimeline")
-# def user_timeline():
-# 	if not api.is_logged_in():
-# 		return False
-
-# 	try:
-# 		# Get data from API
-# 		data = api.home_timeline()
-# 		# Ingest into DB
-# 		for tweet in data.get('timeline'):
-# 			db.insert_tweet(follower**)
-# 		# Send data from DB
-# 		return db.get_user_tweets(data.get("user_id"))
-# 	except Exception as err:
-# 		return False
-
-# 	return {"success" : True}
-
 @app.route("/tweet")
 def tweet():
 	if not api.is_logged_in():
